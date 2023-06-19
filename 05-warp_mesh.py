@@ -26,3 +26,5 @@ mesh_warped.c("blue").wireframe()
 
 # Show the meshes and the arrow
 show(mesh, mesh_warped, arrow, axes=1)
+
+
