@@ -3,10 +3,10 @@ from vedo.applications import SplinePlotter
 
 settings.default_backend = "vtk"
 
-pic = Picture("data/sox9_exp.jpg").bw()
+pic = Picture().bw()
 
 plt = SplinePlotter(pic)
-plt.show(mode="image", zoom='tight')
+plt.show(mode="image", zoom="tight")
 outline = plt.line
 plt.close()
 
@@ -16,6 +16,3 @@ cut_msh = msh.clone().cut_with_point_loop(outline)
 
 cut_msh.interpolate_data_from(msh, n=3)
 show(cut_msh, outline, axes=1).close()
-
-
-
