@@ -3,14 +3,14 @@ from vedo.applications import SplinePlotter
 
 settings.default_backend = "vtk"
 
-pic = Picture().bw()
+pic = Picture("../data/sox9_data/sox9_exp.jpg").bw()
 
 plt = SplinePlotter(pic)
 plt.show(mode="image", zoom="tight")
 outline = plt.line
 plt.close()
 
-print("Cutting with outline...")
+print("Cutting using outline... (please wait)")
 msh = pic.tomesh().cmap("viridis_r")
 cut_msh = msh.clone().cut_with_point_loop(outline)
 

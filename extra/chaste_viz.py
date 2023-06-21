@@ -2,7 +2,7 @@ from vedo import load
 from vedo.applications import Browser
 # Browser("data/chaste/Practical_2_3/results_*.vtu").show()
 
-ugrids = load("data/chaste/Practical_2_3/results_*.vtu")
+ugrids = load("../data/chaste/Practical_2_3/results_*.vtu")
 
 meshes = []
 for u in ugrids:

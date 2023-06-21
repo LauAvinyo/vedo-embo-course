@@ -2,8 +2,8 @@ from vedo import *
 
 settings.default_backend = "vtk"
 
-mesh_a = Mesh('data/mouse_limb_a.stl').c("red5")
-mesh_b = Mesh('data/mouse_limb_b.stl').c("green5")
+mesh_a = Mesh('../data/mouse_limb_a.stl').c("red5")
+mesh_b = Mesh('../data/mouse_limb_b.stl').c("green5")
 
 # Here user clicks on mesh A and then B to pick 5+5 landmarks
 show("Click meshes & press i", mesh_a, mesh_b).clear()
