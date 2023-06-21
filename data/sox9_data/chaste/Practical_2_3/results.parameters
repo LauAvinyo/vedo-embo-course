@@ -1,0 +1,69 @@
+<Chaste>
+
+	<OffLatticeSimulation-2-2>
+		<Dt>0.01</Dt>
+		<EndTime>40</EndTime>
+		<UpdateCellPopulation>1</UpdateCellPopulation>
+		<SamplingTimestepMultiple>100</SamplingTimestepMultiple>
+		<UpdatingTimestepMultiple>1</UpdatingTimestepMultiple>
+		<OutputDivisionLocations>0</OutputDivisionLocations>
+		<OutputCellVelocities>0</OutputCellVelocities>
+	</OffLatticeSimulation-2-2>
+
+	<VertexBasedCellPopulation-2>
+		<CellRearrangementThreshold>0.01</CellRearrangementThreshold>
+		<T2Threshold>0.001</T2Threshold>
+		<CellRearrangementRatio>1.5</CellRearrangementRatio>
+		<OutputCellRearrangementLocations>1</OutputCellRearrangementLocations>
+		<VertexBasedDivisionRule>
+			<ShortAxisVertexBasedDivisionRule-2>
+			</ShortAxisVertexBasedDivisionRule-2>
+		</VertexBasedDivisionRule>
+		<DampingConstantNormal>1</DampingConstantNormal>
+		<DampingConstantMutant>1</DampingConstantMutant>
+		<OutputResultsForChasteVisualizer>1</OutputResultsForChasteVisualizer>
+	</VertexBasedCellPopulation-2>
+
+	<CellCycleModels>
+		<NoCellCycleModel>
+		</NoCellCycleModel>
+	</CellCycleModels>
+
+	<SrnModels>
+		<NullSrnModel>
+		</NullSrnModel>
+	</SrnModels>
+
+	<CellKillers>
+		<T2SwapCellKiller-2>
+		</T2SwapCellKiller-2>
+	</CellKillers>
+
+	<SimulationModifiers>
+		<ConstantTargetAreaModifier-2>
+			<ReferenceTargetArea>1</ReferenceTargetArea>
+		</ConstantTargetAreaModifier-2>
+	</SimulationModifiers>
+
+	<Forces>
+		<PlanarPolarisedFarhadifarForce-2>
+			<PlanarPolarisedLineTensionMultiplier>2</PlanarPolarisedLineTensionMultiplier>
+			<AreaElasticityParameter>1</AreaElasticityParameter>
+			<PerimeterContractilityParameter>0.04</PerimeterContractilityParameter>
+			<LineTensionParameter>0.12</LineTensionParameter>
+			<BoundaryLineTensionParameter>0.12</BoundaryLineTensionParameter>
+		</PlanarPolarisedFarhadifarForce-2>
+	</Forces>
+
+	<CellPopulationBoundaryConditions>
+	</CellPopulationBoundaryConditions>
+
+	<NumericalMethod>
+		<ForwardEulerNumericalMethod-2-2>
+			<UseAdaptiveTimestep>0</UseAdaptiveTimestep> 
+			<UseUpdateNodeLocation>0</UseUpdateNodeLocation> 
+			<GhostNodeForcesEnabled>0</GhostNodeForcesEnabled> 
+		</ForwardEulerNumericalMethod-2-2>
+	</NumericalMethod>
+
+</Chaste>
