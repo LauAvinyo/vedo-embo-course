@@ -2,7 +2,8 @@ import numpy as np
 import matplotlib.pyplot as matplt
 import vedo
 
-############################################# matplotlib
+############################################
+# # matplotlib
 # Create some points
 x = np.array([1, 2, 3, 4, 5])
 y = np.array([4, 5, 2, 5, 4])
@@ -18,7 +19,8 @@ matplt.scatter(x, y, color="#b22222")
 matplt.show()
 matplt.close()
 
-############################################# vedo
+############################################
+# # vedo
 # In Vedo, we create an object for the points
 # and we add the ✨aesthetics✨ on the points object
 points = vedo.Points(pts).c("#b22222").point_size(20)

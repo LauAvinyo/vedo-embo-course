@@ -1,9 +1,9 @@
-from vedo import *
+from vedo import Mesh, settings, show, Lines
 
 settings.default_backend = "vtk"
 
-mesh_a = Mesh('../data/mouse_limb_a.stl').c("red5")
-mesh_b = Mesh('../data/mouse_limb_b.stl').c("green5")
+mesh_a = Mesh("../data/mouse_limb_a.stl").c("red5")
+mesh_b = Mesh("../data/mouse_limb_b.stl").c("green5")
 
 # Here user clicks on mesh A and then B to pick 5+5 landmarks
 show("Click meshes & press i", mesh_a, mesh_b).clear()
@@ -27,7 +27,7 @@ pts_b = [
     (1680.17, 1468.45, 644.959),
     (1693.76, 1164.16, 140.946),
     (1297.26, 904.027, 415.989),
-    (2036.56, 763.552, 477.475)
+    (2036.56, 763.552, 477.475),
 ]
 
 if len(pts_a) > 3:
