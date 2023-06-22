@@ -7,7 +7,7 @@ A python module for scientific analysis of 3D objects and point clouds
 
 ```sh
 pip install -U vedo
-pip install -U scipy
+pip install scipy
 ```
 
 Copy this repo locally:
@@ -21,5 +21,10 @@ cd vedo-embo-course
 - [vedo API docs](https://vedo.embl.es/docs/)
 
 ## Run
-- `python 01-buildmesh.py`
-- `jupyter notebook *.ipynb`
+If running the scripts:
+`python 01-buildmesh.py`
+
+For the notebooks use the software you are more comfortable with. In case you have never used any, we commend using `jupyter-lab`.
+- [Installation with conda](https://jupyterlab.readthedocs.io/en/latest/getting_started/installation.html#conda)
+
+To start the notebooks: `jupyter lab`
