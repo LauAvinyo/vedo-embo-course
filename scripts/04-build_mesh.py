@@ -25,10 +25,10 @@ mesh.backcolor("violet")
 labels = mesh.labels2d("id")
 
 # Print information about the mesh:
-# points(): returns the list of vertices (points) of the mesh
-# faces() : returns the list of faces (triangles) of the mesh
-print("points():", mesh.points())
-print("faces() :", mesh.faces())
+# vertices: returns the list of vertices (points) of the mesh
+# cells or faces : returns the list of cells (triangles) of the mesh
+print("mesh.vertices:", mesh.vertices)
+print("mesh.cells   :", mesh.cells)
 
 # Display the mesh and the vertex labels in a 3D visualization window
 # axes=1 enables display of the cartesian axes

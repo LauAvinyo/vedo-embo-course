@@ -4,14 +4,14 @@ from vedo import dataurl, Plotter, Mesh
 # Point coloring
 man1 = Mesh(dataurl + "man_low.vtk")  # load a mesh from file
 
-scalars = man1.points()[:, 2] + 37  # pick z coordinates of vertices
+scalars = man1.vertices[:, 2] + 37  # pick z coordinates of vertices
 man1.cmap("afmhot", scalars, on="points")  # choose a colormap to colorize mesh points
 
 #####################################
 # Cell coloring
 man2 = man1.clone()  # make an exact copy of man1
 
-scalars = man2.cell_centers()[:, 2] + 37  # pick z coordinates of cells
+scalars = man2.cell_centers[:, 2] + 37  # pick z coordinates of cells
 man2.cmap("afmhot", scalars, on="cells").add_scalarbar()
 
 #####################################

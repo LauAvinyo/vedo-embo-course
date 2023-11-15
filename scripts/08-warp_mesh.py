@@ -10,9 +10,9 @@ mesh = Mesh(dataurl + "man.vtk").color("white")
 # (to speed up the computation)
 mesh_dec = mesh.clone().triangulate().decimate(n=200)
 
-sources = [[0.9, 0.0, 0.2]]  # this point moves
+sources = [[0.9, 0.0, 0.2]]  # this point must move
 targets = [[1.2, 0.0, 0.4]]  # ...to this.
-for pt in mesh_dec.points():
+for pt in mesh_dec.vertices:
     if pt[0] < 0.3:  # while these pts don't move
         sources.append(pt)  # (e.i. source = target)
         targets.append(pt)

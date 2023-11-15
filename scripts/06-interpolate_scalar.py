@@ -7,7 +7,7 @@ msh = Mesh(dataurl + "290.vtk")
 
 # Pick 100 points where we measure the value of a gene expression
 ids = np.random.randint(0, msh.npoints, 100)
-pts = msh.points()[ids]        # slice the numpy array
+pts = msh.vertices[ids]        # slice the numpy array
 x = pts[:, 0]                  # x coordinates of the points
 gene = np.sin((x+150)/500)**2  # we are making this up!
 
@@ -18,7 +18,7 @@ points = Points(pts, r=10).cmap("Greens", gene)
 msh.interpolate_data_from(points, n=5).cmap("Greens").add_scalarbar()
 
 # Create a graph of the gene expression as function of x-position
-gene_plot = plot(x, gene, lw=0, title="Gene expression").as2d(scale=0.5)
+gene_plot = plot(x, gene, lw=0, title="Gene expression").clone2d(scale=0.5)
 
 # Show the mesh, the points and the graph
-show(msh, points, gene_plot)
+show(msh, points, gene_plot).close()
